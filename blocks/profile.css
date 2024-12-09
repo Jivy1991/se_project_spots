@@ -98,7 +98,7 @@
   opacity: 0.8;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 560px) {
   .profile {
     flex-direction: column;
     max-width: 288px;
@@ -125,7 +125,6 @@
   .profile__column {
     margin: 0 0 20px;
   }
-
   .profile__name {
     align-items: center;
     font-size: 20px;
