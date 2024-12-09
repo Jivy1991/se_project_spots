@@ -120,13 +120,8 @@
   .profile__add-btn {
     margin: auto;
     width: 100%;
-    padding: 18px 32px;
   }
 
-  .profile__add-btn:hover {
-    cursor: pointer;
-    opacity: 0.8;
-  }
   .profile__column {
     margin: 0 0 20px;
   }
