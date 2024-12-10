@@ -23,6 +23,7 @@
   font-size: 32px;
   line-height: 1;
   text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -36,6 +37,7 @@
   margin: 0;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -98,7 +100,7 @@
   opacity: 0.8;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 680px) {
   .profile {
     flex-direction: column;
     width: 288px;
