@@ -26,7 +26,6 @@
   white-space: nowrap;
   overflow: hidden;
   max-width: 350px;
-
 }
 
 .card__like-btn {
@@ -36,6 +35,7 @@
   border: none;
   background-color: transparent;
   opacity: 40%;
+  margin: 0;
 }
 
 .card__like-btn:hover {
@@ -47,8 +47,10 @@
   .card__image {
     height: 288px;
   }
+
   .card__title {
-    max-width: 288px;
+    width: 288px;
     font-size: 16px;
     line-height: 16px;
+  }
 }
