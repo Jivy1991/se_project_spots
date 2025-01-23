@@ -82,10 +82,6 @@ function getCardElement(data) {
     previewModalImageEl.alt = data.name;
   });
 
-  previewCloseButton.addEventListener("click", () => {
-    closeModal(previewModal);
-  });
-
   cardDeleteBtn.addEventListener("click", (evt) => {
     evt.target.closest(".card").remove();
   });
@@ -96,6 +92,10 @@ function getCardElement(data) {
 
   return cardElement;
 }
+
+previewCloseButton.addEventListener("click", () => {
+  closeModal(previewModal);
+});
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
@@ -119,6 +119,7 @@ function handleAddCardSubmit(evt) {
 
   cardsList.prepend(cardEl);
   closeModal(cardModal);
+  evt.target.reset();
 }
 
 profileEditButton.addEventListener("click", () => {

@@ -76,7 +76,6 @@
                 id="profile-description-input"
                 type="text"
                 class="modal__input"
-                name="description"
                 placeholder="Describe yourself"
               />
             </label>
@@ -119,8 +118,9 @@
     <div class="modal" id="preview-modal">
       <div class="modal__container modal__container_type_preview">
         <button
+          aria-label="Close modal"
           type="button"
-          class="modal__close-btn modal__close_btn_type_preview"
+          class="modal__close-btn modal__close-btn_type_preview"
         ></button>
         <img class="modal__image" src="" alt="" />
         <p class="modal__caption"></p>
