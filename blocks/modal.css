@@ -10,11 +10,29 @@
   align-items: center;
   justify-content: center;
   visibility: hidden;
-  padding: 0 16px;
+  padding: 0 20px;
+  opacity: 0;
+  transition: visibility 0.5s linear, opacity 0.5s linear;
 }
 
 .modal_opened {
   visibility: visible;
+  opacity: 1;
+}
+
+.modal__caption {
+  color: #fff;
+  background-color: #212121;
+  gap: 0;
+  margin: auto;
+  height: fit-content;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: left;
+  position: absolute;
 }
 
 .modal__container {
@@ -26,6 +44,22 @@
   position: relative;
   border-radius: 8px;
 }
+
+.modal__container_type_preview {
+  padding: 0;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+}
+
+.modal__image {
+  width: 100%;
+  object-fit: contain;
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 8px;
+}
+
 .modal__close-btn {
   position: absolute;
   top: 32px;
@@ -34,8 +68,17 @@
   height: 40px;
   background-image: url(../images/x\ button.svg);
   border: none;
-  background-color: white;
+  background-color: #fff;
   opacity: 0.4;
+}
+
+.modal__close_btn_type_preview {
+  background-image: url("../images/Group\ 27\ \(1\).svg");
+  top: 0;
+  right: -52.5px;
+  position: absolute;
+  background-color: transparent;
+  opacity: 1;
 }
 
 .modal__close-btn:hover {
@@ -82,7 +125,9 @@
 }
 
 .modal__submit-btn {
-  width: 156px;
+  max-width: 156px;
+  width: 100%;
+  transition: background 0.3s;
   padding: 18px 0;
   border-radius: 8px;
   background-color: black;
@@ -122,5 +167,10 @@
   }
   .modal__submit-btn {
     width: 100%;
+  }
+
+  .modal__close_btn_type_preview {
+    max-width: fit-content;
+    padding: 0;
   }
 }
