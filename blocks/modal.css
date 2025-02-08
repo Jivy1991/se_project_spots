@@ -104,6 +104,7 @@
   line-height: 17.6px;
   opacity: 0.7;
   border-style: none;
+  margin-bottom: 32px;
 }
 
 .modal__input {
@@ -117,9 +118,25 @@
   opacity: 0.4;
 }
 
+.modal__input::placeholder {
+  color: #212121;
+  opacity: 30%;
+}
+
 .modal__input:hover {
   cursor: pointer;
   opacity: 1;
+}
+
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
+.modal__error {
+  display: block;
+  /*use correct color and font size*/
+  color: red;
+  margin-top: 8px;
 }
 
 .modal__submit-btn {
