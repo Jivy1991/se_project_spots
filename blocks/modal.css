@@ -85,6 +85,11 @@
   position: absolute;
 }
 
+.modal__submit-btn_disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
 .modal__title {
   margin: 0 0 32px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -133,10 +138,10 @@
 }
 
 .modal__error {
-  display: block;
-  /*use correct color and font size*/
-  color: red;
+  color: rgba(255, 0, 0, 0.6);
   margin-top: 8px;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .modal__submit-btn {
