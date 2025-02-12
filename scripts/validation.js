@@ -51,7 +51,7 @@ const disableButton = (buttonEl, config) => {
   buttonEl.disabled = true;
 };
 
-const setEventListeners = (formEl, config) => {
+function setEventListeners(formEl, config) {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
   const buttonElement = formEl.querySelector(config.submitButtonSelector);
 
@@ -63,7 +63,7 @@ const setEventListeners = (formEl, config) => {
       toggleButtonState(inputList, buttonElement, config);
     });
   });
-};
+}
 
 const enableValidation = (config) => {
   const formList = document.querySelectorAll(config.formSelector);
@@ -71,5 +71,11 @@ const enableValidation = (config) => {
     setEventListeners(formEl, config);
   });
 };
+
+function resetValidation(formEl, inputList, config) {
+  inputList.forEach((input) => {
+    hideInputError(formEl, input, config);
+  });
+}
 
 enableValidation(settings);
