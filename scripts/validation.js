@@ -10,7 +10,7 @@ const settings = {
 const showInputError = (formEl, inputEl, errorMsg, config) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = errorMsg;
-  errorMsgEl.classList.add("form__input_error_active");
+  errorMsgEl.classList.add(config.errorClass);
   inputEl.classList.add(config.inputErrorClass);
 };
 
@@ -39,7 +39,6 @@ const toggleButtonState = (inputList, buttonEl, config) => {
   if (hasInvalidInput(inputList)) {
     disableButton(buttonEl, config);
   } else {
-    buttonEl.classList.remove("button_inactive");
     buttonEl.classList.remove(config.inactiveButtonClass);
     buttonEl.disabled = false;
   }

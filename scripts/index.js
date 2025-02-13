@@ -58,6 +58,10 @@ const previewCloseButton = previewModal.querySelector(".modal__close-btn");
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
+previewCloseButton.addEventListener("click", () => {
+  closeModal(previewModal);
+});
+
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
@@ -93,10 +97,6 @@ function getCardElement(data) {
 
   return cardElement;
 }
-
-previewCloseButton.addEventListener("click", () => {
-  closeModal(previewModal);
-});
 
 function handleEscape(evt) {
   if (evt.key === "Escape") {
@@ -168,8 +168,3 @@ for (let i = 0; i < initialCards.length; i++) {
   const cardEl = getCardElement(initialCards[i]);
   cardsList.append(cardEl);
 }
-
-initialCards.forEach((item, i) => {
-  const cardEl = item;
-  cardsList.append(cardEl);
-});
