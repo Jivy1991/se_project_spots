@@ -165,10 +165,6 @@ cardModalCloseBtn.addEventListener("click", () => {
   closeModal(cardModal);
 });
 
-cardModalSubmitBtn.addEventListener("click", () => {
-  closeModal(cardModal);
-});
-
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
 
