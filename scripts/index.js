@@ -170,6 +170,6 @@ cardForm.addEventListener("submit", handleAddCardSubmit);
 //}
 
 initialCards.forEach((item, i) => {
-  const cardEl = getCardElement(item);
+  const cardEl = item;
   cardsList.append(cardEl);
 });
