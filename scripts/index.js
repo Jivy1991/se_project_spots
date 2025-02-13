@@ -134,6 +134,14 @@ function handleAddCardSubmit(evt) {
   closeModal(cardModal);
 }
 
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("mousedown", (event) => {
+    if (event.target === modal) {
+      closeModal(modal);
+    }
+  });
+});
+
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDesription.textContent;
