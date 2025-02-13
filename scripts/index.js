@@ -99,8 +99,8 @@ previewCloseButton.addEventListener("click", () => {
 });
 
 function handleEscape(evt) {
-  const activeModal = document.querySelector(".modal_opened");
   if (evt.key === "Escape") {
+    const activeModal = document.querySelector(".modal_opened");
     closeModal(activeModal);
   }
 }
@@ -164,10 +164,10 @@ cardModalSubmitBtn.addEventListener("click", () => {
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
 
-//for (let i = 0; i < initialCards.length; i++) {
-//const cardEl = getCardElement(initialCards[i]);
-// cardsList.append(cardEl);
-//}
+for (let i = 0; i < initialCards.length; i++) {
+  const cardEl = getCardElement(initialCards[i]);
+  cardsList.append(cardEl);
+}
 
 initialCards.forEach((item, i) => {
   const cardEl = item;
