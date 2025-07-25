@@ -30,10 +30,10 @@ const validationConfig = {
   inactiveButtonClass: "button_disabled",
 };
 
-const addTodoButton = document.querySelector(".button_action_add");
+const addTodoButton = document.querySelector(".profile__add-btn");
 const addTodoPopup = document.querySelector("#add-card-modal");
 const addTodoForm = addTodoPopup.querySelector(".modal__form");
-const addTodoCloseBtn = addTodoPopup.querySelector(".popup__close");
+const addTodoCloseBtn = addTodoPopup.querySelector(".modal__close-btn");
 const todoTemplate = document.querySelector("#todo-template");
 const todosList = document.querySelector(".todos__list");
 
