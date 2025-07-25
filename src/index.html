@@ -6,19 +6,19 @@
     <meta name="description" content="???" />
     <meta name="author" content="James Ivy" />
     <meta name="keywords" content="HTML, CSS, ????" />
-    <link rel="stylesheet" href="./pages/index.css" />
+
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title>Spots</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/logo.svg.svg" alt="Spot logo" class="header__logo" />
+        <img src="./images/logo.svg" alt="Spot logo" class="header__logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
           <img
-            src="./images/avatar.jpg"
+            src="<%=require('./images/avatar.jpg')%>"
             alt="Bessie Coleman"
             class="profile__avatar"
           />
@@ -27,14 +27,14 @@
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-btn">
               <img
-                src="./images/pencil.svg.svg"
+                src="./images/pencil.svg"
                 alt="pencil icon"
                 class="profile__pencil"
               />Edit Profile
             </button>
           </div>
           <button type="button" class="profile__add-btn">
-            <img src="./images/plus.svg.svg" alt="plus icon" />New Post
+            <img src="./images/plus.svg" alt="plus icon" />New Post
           </button>
         </section>
         <section class="cards page__section">
@@ -146,7 +146,5 @@
         <p class="modal__caption"></p>
       </div>
     </div>
-    <script defer src="./scripts/validation.js"></script>
-    <script defer src="./scripts/index.js"></script>
   </body>
 </html>
